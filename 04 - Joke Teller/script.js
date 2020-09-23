@@ -108,13 +108,13 @@ const VoiceRSS = {
 
 function test() {
 	VoiceRSS.speech({
-		key: '<API key>',
+		key: '1662de0e86c24faab7dcd41977dbc08c',
 		src: 'Hello, world!',
 		hl: 'en-us',
 		r: 0,
 		c: 'mp3',
 		f: '44khz_16bit_stereo',
-		ssml: false
+		ssml: false,
 	});
 }
 
