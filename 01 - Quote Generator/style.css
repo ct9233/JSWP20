@@ -87,9 +87,19 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
+    color: rgba(0, 0, 0, 0.5);
     font-size: 14px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
+}
+
+footer a {
+    color: black;
+    opacity: 60%;
+}
+
+footer > p  {
+    margin: 3px;
 }
 
 /* Loader */
