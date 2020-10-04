@@ -90,8 +90,14 @@ h3 {
 
 .fas {
 	font-size: 30px;
-	color: rgb(129, 129, 129);
+	color: #3E3654;
 	margin-right: 30px;
+	cursor: pointer;
+	user-select: none;
+}
+
+.fas:hover {
+	filter: brightness(80%);
 }
 
 .main-button {
