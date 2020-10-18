@@ -1,6 +1,6 @@
 :root {
-	--primary-color: darkslateblue;
-	--font-color: black;
+	--primary-color: #564e6f;
+	--font-color: #958fa5;
 }
 
 html {
@@ -43,7 +43,6 @@ video {
 .show-controls {
 	width: 100%;
 	height: 30%;
-	background: darkslateblue;
 	z-index: 2;
 	position: absolute;
 	bottom: 0;
@@ -56,11 +55,18 @@ video {
 	width: 100%;
 	height: 95px;
 	margin-top: -95px;
-	background: rgba(0, 0, 0, 0.5);
+	background: rgba(0, 0, 0, 0.6);
 	box-sizing: border-box;
 	z-index: 5;
 	display: flex;
 	justify-content: space-between;
+	opacity: 0;
+	transition: all 0.5s ease-out 2s;
+}
+
+.show-controls:hover .controls-container {
+	opacity: 1;
+	transition: all 0.5s ease-out;
 }
 
 .control-group {
@@ -162,6 +168,7 @@ video {
 
 select {
 	color: var(--font-color);
+	background-color: rgba(0, 0, 0, 0.6);
 	border: none;
 	font-size: 18px;
 	position: relative;
@@ -173,6 +180,10 @@ select > option {
 	background: rgba(0, 0, 0, 0.9);
 	border: none;
 	font-size: 14px;
+}
+
+select:focus {
+	outline: none !important;
 }
 
 /* Elapsed Time & Duration */
