@@ -15,15 +15,14 @@ body {
 }
 
 .header {
-	background: darkslategrey;
-
+	background: #2b2146;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 h1 {
-	color: white;
+	color: darkviolet;
 	font-size: 30px;
 }
 
