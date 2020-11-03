@@ -70,7 +70,7 @@ button {
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
-	background-color: rgb(151, 155, 173);
+	background-color: rgb(121, 129, 165);
 }
 
 button:hover {
@@ -93,7 +93,7 @@ button:focus {
 
 .clear {
 	background-color: #ac4646;
-	color: whitesmoke;
+	color: rgb(209, 194, 194);
 }
 
 .clear:hover {
