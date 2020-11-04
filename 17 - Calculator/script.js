@@ -2,6 +2,15 @@ const calculatorDisplay = document.querySelector('h1');
 const inputBtns = document.querySelectorAll('button');
 const clearBtn = document.getElementById('clear-btn');
 
+// Calculate first and second values depending on operator
+const calculate = {
+    '/': (firstNumber, secondNumber) => firstNumber / secondNumber,
+    '*': (firstNumber, secondNumber) => firstNumber * secondNumber,
+    '+': (firstNumber, secondNumber) => firstNumber + secondNumber,
+    '-': (firstNumber, secondNumber) => firstNumber - secondNumber,
+    '=': (firstNumber, secondNumber) => secondNumber,
+};
+
 let firstValue = 0;
 let operatorValue = '';
 let awaitingNextValue = false;
@@ -28,15 +37,6 @@ function addDecimal() {
     } 
 }
 
-// Calculate first and second values depending on operator
-const calculate = {
-    '/': (firstNumber, secondNumber) => firstNumber / secondNumber,
-    '*': (firstNumber, secondNumber) => firstNumber * secondNumber,
-    '+': (firstNumber, secondNumber) => firstNumber + secondNumber,
-    '-': (firstNumber, secondNumber) => firstNumber - secondNumber,
-    '=': (firstNumber, secondNumber) => secondNumber,
-};
-
 // Rules governing operator use
 function useOperator(operator) {
     const currentValue = Number(calculatorDisplay.textContent);
@@ -57,6 +57,14 @@ function useOperator(operator) {
     operatorValue = operator;
 }
 
+// Reset all values, display
+function resetAll() {
+    firstValue = 0;
+    operatorValue = '';
+    awaitingNextValue = false;
+    calculatorDisplay.textContent = '0';
+}
+
 // Add Event Listeners for numbers, operators, decimal buttons
 inputBtns.forEach((inputBtn) => {
     if (inputBtn.classList.length === 0) {
@@ -68,13 +76,4 @@ inputBtns.forEach((inputBtn) => {
     }
 });
 
-// Reset all values, display
-function resetAll() {
-    firstValue = 0;
-    operatorValue = '';
-    awaitingNextValue = false;
-    calculatorDisplay.textContent = '0';
-}
-
-// Event Listener
 clearBtn.addEventListener('click', resetAll);
